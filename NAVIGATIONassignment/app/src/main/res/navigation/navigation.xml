@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationassignment.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.navigationassignment.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_academicrecordsFragment"
+            app:destination="@id/academicrecordsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_healthrecordsFragment"
+            app:destination="@id/healthrecordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.navigationassignment.settingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_alertsFragment"
+            app:destination="@id/alertsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alertsFragment"
+        android:name="com.example.navigationassignment.alertsFragment"
+        android:label="fragment_alerts"
+        tools:layout="@layout/fragment_alerts" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.navigationassignment.contactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/healthrecordsFragment"
+        android:name="com.example.navigationassignment.healthrecordsFragment"
+        android:label="fragment_healthrecords"
+        tools:layout="@layout/fragment_healthrecords" />
+    <fragment
+        android:id="@+id/academicrecordsFragment"
+        android:name="com.example.navigationassignment.academicrecordsFragment"
+        android:label="fragment_academicrecords"
+        tools:layout="@layout/fragment_academicrecords" />
+</navigation>
